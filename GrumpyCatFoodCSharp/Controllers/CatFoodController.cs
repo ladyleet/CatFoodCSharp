@@ -16,8 +16,13 @@ namespace GrumpyCatFoodCSharp.Controllers
         public IEnumerable<string> Get([FromQuery]string food)
         {
             var catFoodKeyWords = new Dictionary<string, string>() {
-                {"pizza", "pizza emoji"},
-                {"burger", "burger emoji"}
+                {"pizza", "pizza response"},
+                {"burger", "burger response"},
+                {"donut", "donut response"},
+                {"hot dog", "hot dot response"},
+                {"fries", "fries response"},
+                {"goldfish", "goldfish response"},
+                {"taco", "taco response"}
 
             };
 
