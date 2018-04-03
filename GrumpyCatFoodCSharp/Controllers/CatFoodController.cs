@@ -13,7 +13,7 @@ namespace GrumpyCatFoodCSharp.Controllers
     {
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get([FromQuery]string foods)
+        public IEnumerable<string> Get([FromQuery]string food)
         {
             var catFoodKeyWords = new Dictionary<string, string>() {
                 {"pizza", "pizza emoji"},
@@ -21,8 +21,8 @@ namespace GrumpyCatFoodCSharp.Controllers
 
             };
 
-            if (catFoodKeyWords.ContainsKey(foods))
-                return new string[] { catFoodKeyWords[foods] };
+            if (catFoodKeyWords.ContainsKey(food))
+                return new string[] { catFoodKeyWords[food] };
 
             return Enumerable.Empty<string>();
         }
