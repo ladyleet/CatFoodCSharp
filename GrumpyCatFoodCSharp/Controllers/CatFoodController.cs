@@ -19,7 +19,7 @@ namespace GrumpyCatFoodCSharp.Controllers
                 {"pizza", "pizza response"},
                 {"burger", "burger response"},
                 {"donut", "donut response"},
-                {"hot dog", "hot dot response"},
+                {"hot%20dog", "hot dot response"},
                 {"fries", "fries response"},
                 {"goldfish", "goldfish response"},
                 {"taco", "taco response"}
