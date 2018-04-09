@@ -13,7 +13,7 @@ namespace GrumpyCatFoodCSharp.Controllers
 {
 
     [Route("api/[controller]")]
-    public class CatFoodController : Controller
+    public class HasCatFoodController : Controller
 
 
     {
@@ -28,13 +28,13 @@ namespace GrumpyCatFoodCSharp.Controllers
                 {"ta", "tacoooo response"}
 
             };
-        // GET: api/values
+
         [HttpGet]
-        public IEnumerable<KeyValuePair<string, string>> Get([FromQuery]string food)
+        public Boolean Has([FromQuery]string food)
         {
             //var key = HttpUtility.UrlDecode(food);
-            return CatFoodController.catFoodKeyWords.Where((x) => x.Key.StartsWith(food))
-                                   .ToArray();
+
+            return HasCatFoodController.catFoodKeyWords.ContainsKey(food);
 
         }
     }
